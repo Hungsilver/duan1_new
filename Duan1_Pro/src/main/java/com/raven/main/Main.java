@@ -9,9 +9,14 @@ import com.CodeMain.services.HoaDonService;
 import com.CodeMain.services.serviceImp.CTSPServiceImp;
 import com.CodeMain.services.serviceImp.HoaDonServiceImp;
 import com.CodeMain.view.Form_chucNang.DangNhap;
+import com.CodeMain.view.Form_chucNang.FRMQLKhachHang;
 import com.CodeMain.view.Form_chucNang.FRMQLNhanVien;
+import com.CodeMain.view.Form_chucNang.FRMQLSanPham;
 import com.CodeMain.view.Form_chucNang.FRMThongKe;
+import com.CodeMain.view.Form_chucNang.FRMThongtincanhan;
 import com.CodeMain.view.Form_chucNang.FrmBanHang;
+import com.CodeMain.view.Form_chucNang.FrmHoaDon;
+import com.CodeMain.view.Form_chucNang.FrmKhuyenMai;
 import com.raven.event.EventMenu;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -64,38 +69,38 @@ public class Main extends javax.swing.JFrame {
                 formMain1.showForm(new FrmBanHang());
                 break;
             case 1:
-                formMain1.showForm(new FRMQLNhanVien());
+                formMain1.showForm(new FRMQLSanPham());
                 break;
             case 2:
-                formMain1.showForm(new FRMThongKe());
+                formMain1.showForm(new FrmHoaDon());
                 break;
             case 3:
-                formMain1.showForm(new FRMThongKe());
+                formMain1.showForm(new FrmKhuyenMai());
                 break;
             case 4:
                 formMain1.showForm(new FRMThongKe());
                 break;
             case 5:
-                formMain1.showForm(new FRMThongKe());
+                formMain1.showForm(new FRMQLNhanVien());
                 break;
-            case 6://dăng xuất
+            case 6:
+                formMain1.showForm(new FRMQLKhachHang());
+                break;
+            case 7:
+                formMain1.showForm(new FRMThongtincanhan());
+                break;
+            case 8://dăng xuất
                 int dx = JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đăng xuất", "Đăng xuất", 1);
                 if (dx == 0) {
                     this.dispose();
                     new DangNhap().setVisible(true);
                 }
                 break;
-            case 7://out
+            case 9://out
                 int outt = JOptionPane.showConfirmDialog(this, "Bạn chắc chắn muốn đóng ứng dụng");
                 if (outt == 0) {
                     System.exit(0);
                 }
-                break;
-            case 8:
-                formMain1.showForm(new FRMThongKe());
-                break;
-            case 9:
-                formMain1.showForm(new FRMThongKe());
                 break;
             default:
                 throw new AssertionError();

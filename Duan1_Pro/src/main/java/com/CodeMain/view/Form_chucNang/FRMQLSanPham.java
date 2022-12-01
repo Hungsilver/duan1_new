@@ -13,6 +13,11 @@ import com.CodeMain.domainModel.MauSac;
 import com.CodeMain.domainModel.NoiSX;
 import com.CodeMain.domainModel.SanPham;
 import com.CodeMain.repository.SanPhamRepository;
+import com.CodeMain.services.DanhMucService;
+import com.CodeMain.services.MatKinhService;
+import com.CodeMain.services.MauSacService;
+import com.CodeMain.services.NSXService;
+import com.CodeMain.services.SanPhamService;
 import com.CodeMain.services.serviceImp.CTSPServiceImp;
 import com.CodeMain.services.serviceImp.DanhMucServiceImp;
 import com.CodeMain.services.serviceImp.HangServiceImp;
@@ -20,6 +25,7 @@ import com.CodeMain.services.serviceImp.MatKinhServiceImp;
 import com.CodeMain.services.serviceImp.MauSacServiceImp;
 import com.CodeMain.services.serviceImp.NoiSXServiceImp;
 import com.CodeMain.services.serviceImp.SanPhamServiceImp;
+import com.com.CodeMain.services.HangService;
 import java.awt.Image;
 import java.io.File;
 import java.math.BigDecimal;
@@ -50,12 +56,12 @@ public class FRMQLSanPham extends javax.swing.JPanel {
     private List<DanhMuc> listDm;
     private List<Hang> listH;
     private List<SanPham> listSp;
-    private n _NoiSXServiceImp;
-    private MauSacServiceImp _MauSacServiceImp;
-    private MatKinhServiceImp _MatKinhServiceImp;
-    private DanhMucServiceImp _DanhMucServiceImp;
-    private HangServiceImp _HangServiceImp;
-    private SanPhamServiceImp _SanPhamServiceImp;
+    private NSXService _NoiSXServiceImp;
+    private MauSacService _MauSacServiceImp;
+    private MatKinhService _MatKinhServiceImp;
+    private DanhMucService _DanhMucServiceImp;
+    private HangService _HangServiceImp;
+    private SanPhamService _SanPhamServiceImp;
     private String idClick;
     private DefaultTableModel _Model;
     private String mactsp;
@@ -77,7 +83,7 @@ public class FRMQLSanPham extends javax.swing.JPanel {
         listms = _MauSacServiceImp.getListAll();
         listMk = _MatKinhServiceImp.getListAll();
         listDm = _DanhMucServiceImp.getListAll();
-        listH = _HangServiceImp.getListAll();
+        listH = _HangServiceImp.getAll();
 
         for (NoiSX o : listNSX) {
             cbo_noisx.addItem(o.getTen());
@@ -544,9 +550,9 @@ public class FRMQLSanPham extends javax.swing.JPanel {
             LoadTable();
             JOptionPane.showMessageDialog(this, "update thanh cong");
         } catch (Exception ex) {
-            Logger.getLogger(FRMHang.class.getName()).log(Level.SEVERE, null, ex);
-            ex.printStackTrace();
             JOptionPane.showMessageDialog(this, "update that bai");
+            ex.printStackTrace();
+
         }
     }//GEN-LAST:event_btn_updateActionPerformed
 

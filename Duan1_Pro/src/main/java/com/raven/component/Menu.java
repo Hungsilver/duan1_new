@@ -106,14 +106,14 @@ public class Menu extends javax.swing.JPanel {
     private void initData() {
         listMenu.addItem(new Model_Menu("1", "Giao Dịch", Model_Menu.MenuType.MENU));
         listMenu.addItem(new Model_Menu("2", "Sản phẩm", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("3", "Khách Hàng", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("3", "Hóa đơn", Model_Menu.MenuType.MENU));
         listMenu.addItem(new Model_Menu("4", "Voucher", Model_Menu.MenuType.MENU));
         listMenu.addItem(new Model_Menu("5", "Thống kê", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("6", "Đổi mật khẩu", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("7", "Đăng xuất", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("8", "Đóng ứng dụng", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("9", "More", Model_Menu.MenuType.MENU));
-        listMenu.addItem(new Model_Menu("10", "About", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("6", "Nhân Viên", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("7", "Khách Hàng", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("8", "Đổi mật khẩu", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("9", "Đăng xuất", Model_Menu.MenuType.MENU));
+        listMenu.addItem(new Model_Menu("10", "Đóng ứng dụng", Model_Menu.MenuType.MENU));
         listMenu.addItem(new Model_Menu("", "", Model_Menu.MenuType.EMPTY));
     }
 
